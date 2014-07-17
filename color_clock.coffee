@@ -1,5 +1,5 @@
-// colour_clock.cs is ported across to coffeescript using the js2coffee.org
-// engine
+# colour_clock.cs is ported across to coffeescript using the js2coffee.org
+# engine
 
 randomInt = (min, max) ->
   Math.floor Math.random() * (max - min + 1) + min

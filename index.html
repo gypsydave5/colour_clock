@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='style.css'/>
+	<script src='script.js'></script>
+</head>
+<body onload="colorBoxes()">
+<h1>HSLa Colour Randomiser</h1>
+<div id="wrapper">
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+    <div class="colorbox"></div>
+</div>
+
+<fieldset id="sliders">
+
+    <input type="range" min="0" max="360" onchange="showValue(this.value, 'hueMinNumber'); HSLaSettings.hueMin = parseInt(this.value); swatchColor(this.value,'hueMinSwatch');colorBoxes()" value="0" />
+    <div class="swatch" id="hueMinSwatch" style="background: red;"></div>
+    <label>H(ue) min = <span id="hueMinNumber">0</span></label>
+
+    <input type="range" min="0" max="360" onchange="showValue(this.value, 'hueMaxNumber'); HSLaSettings.hueMax = parseInt(this.value); swatchColor(this.value,'hueMaxSwatch'); colorBoxes()" value="360" />
+    <div class="swatch" id="hueMaxSwatch" style="background: red;"></div>
+    <label>H(ue) max = <span id="hueMaxNumber">360</span></label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'saturationMinNumber'); HSLaSettings.satMin = parseInt(this.value); colorBoxes()" value="0" />
+    <label>S(aturation) min = <span id="saturationMinNumber">0</span>%</label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'saturationMaxNumber'); HSLaSettings.satMax = parseInt(this.value); colorBoxes()" value="100" />
+    <label>S(aturation) max = <span id="saturationMaxNumber">100</span>%</label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'lightnessMinNumber'); HSLaSettings.lightMin = parseInt(this.value); colorBoxes()" value="0" />
+    <label>L(ightness) min = <span id="lightnessMinNumber">0</span></label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'lightnessMaxNumber'); HSLaSettings.lightMax = parseInt(this.value); colorBoxes()" value="100" />
+    <label>L(ightness) max = <span id="lightnessMaxNumber">100</span></label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'alphaMinNumber', 100); HSLaSettings.alphaMin = parseInt(this.value)/100; colorBoxes()" value="0" />
+    <label>a(lpha) min = <span id="alphaMinNumber">0</span></label>
+
+    <input type="range" min="0" max="100" onchange="showValue(this.value, 'alphaMaxNumber', 100); HSLaSettings.alphaMax = parseInt(this.value)/100; colorBoxes()" value="100" />
+    <label>a(lpha) max = <span id="alphaMaxNumber">1</span></label>
+
+    <input type="button" value="Change Colors!" onclick="colorBoxes()" />
+</fieldset>
+<div id="description">
+    <p>a 10 x 10 grid of blocks, each with a random HSLa colour. Set the limits of the random colour using the sliders. The background image is of <a href="https://en.wikipedia.org/wiki/Ada_Lovelace" target="blank">Ada Lovelace</a>.</p>
+</div>
+</body>
+</html>
